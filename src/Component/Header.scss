@@ -1,0 +1,201 @@
+@font-face {
+    font-family: "MyFont";
+    src: url("../Font/Robot.ttf"); 
+}
+
+.sorted {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: darken($color: #000000, $amount: 100%);
+}
+
+.header {
+    position: sticky;
+    width: 100%;
+    top: -300px;
+    z-index: 100;
+}
+
+.change .bar1 {
+    top: 12px;
+    transform: rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    top: -12px;
+    transform: rotate(45deg);
+}
+
+.inner_header {
+    display: flex;
+    width: 100%;
+    height: 42px;
+    justify-content: center;
+    align-items: center;
+    background-color: darken($color: #000000, $amount: 100%);
+
+    .sort {
+        @extend .sorted;
+        max-width: 1440px;
+        width: 100%;
+    
+        .container {
+            cursor: pointer;
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            padding: 0 5px;
+
+            .bar1,
+            .bar2,
+            .bar3 {
+            width: 30px;
+            height: 4px;
+            margin: 4px 0;
+            background-color: rgb(255, 255, 255);
+            transition: opacity .4s, transform .4s;
+            position: relative;
+            }
+        }
+    
+        .rect {
+            width: 40px;
+            height: 42px;
+            padding: 0 5px;
+            
+            img{
+                width: 40px;
+                height: 42px;
+            }
+        }
+    
+        .sort1 {
+            @extend .sorted;
+            flex-grow: 2;
+            color: white;
+            margin: 0;
+            padding: 0;
+        
+            li.menu_text {
+                padding: 10px 20px;
+                box-sizing: border-box;
+                &:hover {
+                    text-shadow: 2px 2px 5px #fff;
+                }
+            }
+
+            li.menu_text_sub{
+                padding: 10px 20px;
+                box-sizing: border-box;
+
+                :nth-child(1){
+                    &:hover {
+                        text-shadow: 2px 2px 5px #fff;
+                    }
+                }
+            }
+        }
+        
+        .sort2 {
+            @extend .sorted;
+            flex-grow: 1;
+            color: white;
+            margin: 0;
+            padding: 0;
+        
+            li {
+                padding: 10px 15px;
+            }
+        }
+
+        li {
+            cursor: pointer;
+            font-family: "MyFont";
+            white-space: nowrap;
+        }
+    }
+}
+
+.background {
+    @extend .sorted;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    
+    .adver {
+        width: 1024px;
+        padding: 0;
+        margin: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+#menu {
+    position: relative;
+
+    .menu_title {
+        display: hidden;
+    }
+
+    .menu_shortened {
+        @extend .sorted;
+        align-items: center;
+        position: absolute;
+        padding: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        top: 100%;
+        transform: translate(-33%, 0);
+
+        li {
+            display: none;
+            width: 100px;
+            padding: 10px;
+            border: 1px solid;
+            border-color: rgb(255, 243, 243);
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+
+            &:hover {
+                opacity: 0.5;
+                transition: opacity .3s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .background {
+        .adver {
+            visibility: hidden;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .inner_header {
+        .sort{
+            .sort1 {
+                display: none;
+            }
+
+            .sort2 {
+                justify-content: flex-end;
+            }
+        }
+    }
+}

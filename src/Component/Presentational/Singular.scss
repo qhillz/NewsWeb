@@ -1,0 +1,70 @@
+// @keyframes loading {
+//     0% {
+//         transform: translateX(0);
+//     }
+
+//     50%,
+//     100% {
+//         transform: translateX(370px);
+//     }
+// }
+
+.S_title{
+    margin: 0;
+    padding: 0;
+}
+
+.S_content{
+    margin: 0;
+    padding: 0;
+}
+
+.Single_box_sk_title{
+    background-color: darken($color: #ffffff, $amount: 5);
+}
+
+.Single_box_sk_img{
+    background-color: darken($color: #ffffff, $amount: 5);
+    margin: 5px 0;
+}
+
+.Single_box_sk_explain{
+    background-color: darken($color: #ffffff, $amount: 5);
+    margin: 5px 0;
+}
+
+// .Single_box_sk_img::after {
+//     content: '';
+//     display: inline-block;
+//     position: relative;
+//     top: 0;
+//     left: 0;
+//     width: 30px;
+//     height: 100%;
+//     background: linear-gradient(to right, #f2f2f2, #ddd, #f2f2f2);
+//     animation: loading 1s infinite linear;
+// }
+
+// .Single_box_sk_title::after {
+//     content: '';
+//     display: inline-block;
+//     position: relative;
+//     top: 0;
+//     left: 0;
+//     width: 30px;
+//     height: 100%;
+//     background: linear-gradient(to right, #f2f2f2, #ddd, #f2f2f2);
+//     animation: loading 1s infinite linear;
+// }
+
+// .Single_box_sk_explain::after{
+//     content: '';
+//     display: inline-block;
+//     position: relative;
+//     top: 0;
+//     left: 0;
+//     width: 30px;
+//     height: 100%;
+//     background: linear-gradient(to right, #f2f2f2, #ddd, #f2f2f2);
+//     animation: loading 1s infinite linear;
+// }

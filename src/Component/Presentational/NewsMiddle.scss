@@ -1,0 +1,29 @@
+.Middle_Layout_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+
+    .Middle_Layout{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Middle_Div{
+        display: flex;
+        width: 1300px;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Middle_Div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
